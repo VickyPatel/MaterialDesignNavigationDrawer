@@ -33,16 +33,17 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        ViewHolder viewHolder = null;
         if (viewType == TYPE_ITEM) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_row_navigation_drawer, parent, false);
-            ViewHolder viewHolder = new ViewHolder(view, viewType);
-            return viewHolder;
+            viewHolder = new ViewHolder(view, viewType);
+     
         } else if (viewType == TYPE_HEADER) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.header_navigation_drawer, parent, false);
-            ViewHolder viewHolder = new ViewHolder(view, viewType);
-            return viewHolder;
+            viewHolder = new ViewHolder(view, viewType);
+
         }
-        return null;
+        return viewHolder;
     }
 
     @Override
@@ -93,7 +94,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
 
             } else {
                 name = (TextView) itemView.findViewById(R.id.name);
-                email = (TextView) itemView.findViewById(R.id.name);
+                email = (TextView) itemView.findViewById(R.id.email);
                 profile = (ImageView) itemView.findViewById(R.id.circleImageView);
                 Holderid = 0;
             }
