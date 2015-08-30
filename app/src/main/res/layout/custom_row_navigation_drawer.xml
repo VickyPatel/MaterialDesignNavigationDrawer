@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
-    android:layout_height="wrap_content"
+    android:layout_height="48dp"
     android:background="#ffffff"
     android:orientation="horizontal">
 
@@ -12,14 +12,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
+        android:src="@drawable/ic_mail"
         />
 
     <TextView
         android:id="@+id/rowText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="12dp"
+        android:paddingLeft="32dp"
         android:paddingTop="4dp"
+        android:text="Menu Item"
+        android:textColor="@color/primary_text"
         android:textAppearance="?android:attr/textAppearanceMedium"
         />
 
