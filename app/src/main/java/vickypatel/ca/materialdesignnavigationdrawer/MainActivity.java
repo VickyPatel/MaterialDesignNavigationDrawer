@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity {
 
     String[] titles = {"Inbox", "Starred", "Important", "Settings"};
+    String[] titles2 = {"Help", "Feedback", "Logout"};
     int[] icons = {R.drawable.ic_mail, R.drawable.ic_fav, R.drawable.ic_imp, R.drawable.ic_settings};
     int profile = R.drawable.convo;
 
@@ -42,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
         mRecycleView = (RecyclerView) findViewById(R.id.menuRecycleView);
         mRecycleView.setHasFixedSize(true);
 
-        mAdapter = new NavigationAdapter(titles, icons, name, email, profile);
+        mAdapter = new NavigationAdapter(this,titles,titles2, icons, name, email, profile);
         mRecycleView.setAdapter(mAdapter);
 
         mLayoutManager = new LinearLayoutManager(this);
